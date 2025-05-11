@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "326316871909",
+    "project_id": "aplicaciones-moviles-c39b8",
+    "storage_bucket": "aplicaciones-moviles-c39b8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:326316871909:android:263ca30e6d3b1685bd440c",
+        "android_client_info": {
+          "package_name": "com.example.chopchop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJCg2R5VwFh78e958wshYWBu1z1lYikLE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
