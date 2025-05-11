@@ -10,8 +10,15 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Lógica de autenticación aquí
-    alert('Iniciar sesión (demo)');
+    const users = JSON.parse(localStorage.getItem('users') || '[]');
+    const user = users.find(user => user.email === email && user.password === password);
+    if (user) {
+      // Guardar usuario logueado (opcional)
+      localStorage.setItem('loggedUser', JSON.stringify(user));
+      window.location.href = '/principal_listas';
+    } else {
+      alert('Correo o contraseña incorrectos');
+    }
   };
 
   const handleRegisterRedirect = () => {

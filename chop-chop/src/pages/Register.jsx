@@ -11,16 +11,25 @@ const Register = () => {
 
   const handleRegister = (e) => {
     e.preventDefault();
-    // Lógica de registro aquí
     if (password !== confirmPassword) {
       alert('Las contraseñas no coinciden');
       return;
     }
-    alert('Registro (demo)');
+    // Obtener usuarios existentes
+    const users = JSON.parse(localStorage.getItem('users') || '[]');
+    // Validar si el correo ya existe
+    if (users.some(user => user.email === email)) {
+      alert('El correo ya está registrado');
+      return;
+    }
+    // Guardar nuevo usuario
+    users.push({ email, password });
+    localStorage.setItem('users', JSON.stringify(users));
+    alert('Registro exitoso. Ahora puedes iniciar sesión.');
+    window.location.href = '/login';
   };
 
   const handleLoginRedirect = () => {
-    // Redirigir a la página de login
     window.location.href = '/login';
   };
 
